@@ -1,15 +1,9 @@
-// plugins {
-// 	id 'org.springframework.boot' version '2.1.7.RELEASE'
-// 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-// 	id 'java'
-// 	id 'maven-publish'
-// }
-
 plugins {
-    id 'java'
-    id 'maven-publish'
+	id 'org.springframework.boot' version '2.1.7.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'maven-publish'
 }
-
 
 group = 'com.dithok'
 version = '0.0.1-SNAPSHOT'
@@ -22,17 +16,11 @@ repositories {
     }
 }
 
-// dependencies {
-// 	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-// 	compile 'org.springframework.boot:spring-boot-starter-web'
-// 	compile 'org.springframework.boot:spring-boot-starter-data-rest'
-// 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-// }
-
 dependencies {
-    compile 'org.springframework.boot:spring-boot-starter-data-rest:2.1.7.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-web:2.1.7.RELEASE'
-	testCompile 'org.springframework.boot:spring-boot-starter-test:2.1.7.RELEASE'
+	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 

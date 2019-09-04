@@ -1,5 +1,6 @@
 package com.dithok.login.controller;
 
+import com.dithok.login.model.UserModel;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
