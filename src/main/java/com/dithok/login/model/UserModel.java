@@ -1,8 +1,18 @@
 package com.dithok.login.model;
 
-public class UserModel{
+//import uses in for databse
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-   	private String userName;
+@Entity //tells hibernate to make table from this class
+public class UserModel{
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	
+	private String userName;
 	private String userPassword;
 	private String userMobileNumber;
 	private String userEmailID;
