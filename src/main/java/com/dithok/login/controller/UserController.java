@@ -46,6 +46,7 @@ public class UserController{
 		return "POST method is called. Username is <b>" + user.getUserName() + "</b>. Password is <b>" + user.getUserPassword()+"</b>";
 	}	
 }
+ 
 
 
 	

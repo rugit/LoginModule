@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "spring.datasource.mobileNumber",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.mobileNumber'"
+  },
+  {
+    "name": "spring.datasource.\r\n    spring.jpa.hibernate.ddl-auto",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.\r\n    spring.jpa.hibernate.ddl-auto'"
+  },
+  {
+    "name": "spring.datasource.\r\n    spring.jpa.hibernate.ddl-auto",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.datasource.\r\n    spring.jpa.hibernate.ddl-auto'"
+  }
+]}
