@@ -17,14 +17,14 @@ public class UserRestController{
 
 	//POST route
 	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers")
-	public String createUser(@RequestBody UserRequestModel user){
+	public UserResponseModel createUsers(@RequestBody UserRequestModel user){
 
 		UserResponseModel returnValue = new UserResponseModel();
 
 		UserDto userDto = new UserDto();
 		BeanUtils.copyProperties(user, userDto);
 
-		userDto createdUser = UserService.createUser(userDto);
+		UserDto createdUser = userService.createUser(userDto);
 		BeanUtils.copyProperties(createdUser, returnValue);
 
 		return returnValue;

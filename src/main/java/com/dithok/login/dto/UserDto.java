@@ -21,14 +21,14 @@ public class UserDto implements Serializable{
 	public long getId()
 	{
 
-		return Id;
+		return id;
 
 	}
 
-	public void setId(long Id)
+	public void setId(long id)
 	{
 
-		this.Id = Id;
+		this.id = id;
 
 	}
 
@@ -93,18 +93,18 @@ public class UserDto implements Serializable{
 	}
 
 	//Email ID Setter & Getter Methods
-	public String getUserEmailID()
+	public String getUserEmailId()
 	{
 		
-		return userEmailID;
+		return userEmailId;
 	
 	}
 
 
-	public void setUserEmailID(String userEmailID)
+	public void setUserEmailId(String userEmailId)
 	{
 		
-		this.userEmailID = userEmailID;
+		this.userEmailId = userEmailId;
 		
 	}
 

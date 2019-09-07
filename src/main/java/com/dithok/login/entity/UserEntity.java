@@ -13,7 +13,7 @@ public class UserEntity implements Serializable{
 	private static final long serialVersionUID = 1523651623123L;
 
 	@Id
-	@GeneraedValue
+	@GeneratedValue
 	private long id;
 
 	@Column(nullable = false)
@@ -46,14 +46,14 @@ public class UserEntity implements Serializable{
 	public long getId()
 	{
 
-		return Id;
+		return id;
 
 	}
 
-	public void setId(long Id)
+	public void setId(long id)
 	{
 
-		this.Id = Id;
+		this.id = id;
 
 	}
 
@@ -102,18 +102,18 @@ public class UserEntity implements Serializable{
 	}
 
 	//Email ID Setter & Getter Methods
-	public String getUserEmailID()
+	public String getUserEmailId()
 	{
 		
-		return userEmailID;
+		return userEmailId;
 	
 	}
 
 
-	public void setUserEmailID(String userEmailID)
+	public void setUserEmailId(String userEmailId)
 	{
 		
-		this.userEmailID = userEmailID;
+		this.userEmailId = userEmailId;
 		
 	}
 
@@ -159,7 +159,7 @@ public class UserEntity implements Serializable{
 
 	}
 
-	public void setuserEncryptedPassword(String userEncryptedPassword)
+	public void setUserEncryptedPassword(String userEncryptedPassword)
 	{
 
 		this.userEncryptedPassword = userEncryptedPassword;

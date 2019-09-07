@@ -69,15 +69,15 @@ public class UserRequestModel{
 	}
 
 	//Email ID Setter & Getter Methods
-	public String getUserEmailID(){
+	public String getUserEmailId(){
 		
-		return userEmailID;
+		return userEmailId;
 	}
 
 
-	public void setUserEmailID(String userEmailID){
+	public void setUserEmailId(String userEmailId){
 		
-		this.userEmailID = userEmailID;
+		this.userEmailId = userEmailId;
 		
 	}
 
