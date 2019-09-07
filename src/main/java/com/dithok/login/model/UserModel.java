@@ -1,17 +1,15 @@
 package com.dithok.login.model;
 
 //import uses in for databse
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity //tells hibernate to make table from this class
+
+@Entity (name="Dithok_login")//tells hibernate to make table from this class
 public class UserModel{
 	
-	@Id
+
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	
+	private int id;
 	private String userName;
 	private String userPassword;
 	private String userMobileNumber;
@@ -41,6 +39,14 @@ public class UserModel{
 	}
 
 	//Name Setter & Getter Methods
+	@Id
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	@Column(name="User_Name")
 	public String getUserName()
 	{
 
@@ -54,6 +60,7 @@ public class UserModel{
 	}
 
 	//Password Setter & Getter Methods
+	@Column(name="User_Password")
 	public String getUserPassword(){
 		
 		return userPassword;
@@ -66,6 +73,7 @@ public class UserModel{
 	}
 
 	//Mobile Number Setter & Getter Methods
+	@Column(name="Mobile_Number")
 	public String getUserMobileNumber(){
 		
 		return userMobileNumber;
@@ -78,6 +86,7 @@ public class UserModel{
 	}
 
 	//Email ID Setter & Getter Methods
+	@Column(name="Email_ID")
 	public String getUserEmailID(){
 		
 		return userEmailID;
@@ -91,6 +100,7 @@ public class UserModel{
 	}
 
 	//Address Setter & Getter Methods
+	@Column(name="Address")
 	public String getUserAddress(){
 		
 		return userAddress;
@@ -103,6 +113,7 @@ public class UserModel{
 	}
 
 	//Gender Setter & Getter Methods
+	@Column(name="Gender")
 	public String getUserGender(){
 		
 		return userGender;
