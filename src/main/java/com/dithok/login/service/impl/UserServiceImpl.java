@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService{
 		BeanUtils.copyProperties(storedUserDetails, returnedValue);
 
 		
-		return null;
+		return returnedValue;
 	}
 
 };
