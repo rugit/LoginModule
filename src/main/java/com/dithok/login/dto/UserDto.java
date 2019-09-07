@@ -13,6 +13,20 @@ public class UserDto{
 	private String userEmailVerificationToken;
 	private Boolean userEmailVerificationStatus;
 
+	//User Id Setter & Getter Methods
+	public String getUserId()
+	{
+
+		return userId;
+
+	}
+
+	public void setUserId(String userId)
+	{
+
+		this.userId = userId;
+
+	}
 
 	//Name Setter & Getter Methods
 	public String getUserName()
