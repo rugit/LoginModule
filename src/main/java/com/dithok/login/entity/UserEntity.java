@@ -1,20 +1,45 @@
-package com.dithok.login.dto;
+package com.dithok.login.entity;
 
 import java.io.Serializable;
 
-public class UserDto implements Serializable{
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-	private static final long serialVersionUID = 451232167362L;
+@Entity(name="users")
+public class UserEntity implements Serializable{
+
+	private static final long serialVersionUID = 1523651623123L;
+
+	@Id
+	@GeneraedValue
 	private long id;
+
+	@Column(nullable = false)
 	private String userId;
+
+	@Column(nullable = false, length=50)
    	private String userName;
-	private String userPassword;
+	
+	@Column(nullable = false, length=10)
 	private String userMobileNumber;
+
+	@Column(nullable = false, length=120)
 	private String userEmailId;
+
+	@Column(nullable = false)
 	private String userGender;
+
+	@Column(nullable = false, length=10)
 	private String userDOB; //yyyy-mm-dd
+
+	@Column(nullable = false)
 	private String userEncryptedPassword;
+
 	private String userEmailVerificationToken;
+
+	@Column(nullable = false)
 	private Boolean userEmailVerificationStatus = false;
 
 	//User Id Setter & Getter Methods
@@ -58,22 +83,6 @@ public class UserDto implements Serializable{
 	{
 		
 		this.userName = userName;
-	}
-
-	//Password Setter & Getter Methods
-	public String getUserPassword()
-	{
-		
-		return userPassword;
-	
-	}
-
-
-	public void setUserPassword(String userPassword)
-	{
-		
-		this.userPassword = userPassword;
-	
 	}
 
 	//Mobile Number Setter & Getter Methods
@@ -186,5 +195,4 @@ public class UserDto implements Serializable{
 		this.userEmailVerificationStatus = userEmailVerificationStatus;
 
 	}
-
 };

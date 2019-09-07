@@ -4,4 +4,4 @@ import com.dithok.login.dto.UserDto;
 
 public interface UserService{
 	UserDto createUser(UserDto user);
-}
+};
