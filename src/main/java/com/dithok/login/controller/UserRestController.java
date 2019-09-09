@@ -16,7 +16,7 @@ public class UserRestController{
 	UserService userService;
 
 	//POST route
-	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers")
+	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers", consumes = "application/json")
 	public Boolean createUsers(@RequestBody UserRequestModel user){
 
 		try{
@@ -33,6 +33,27 @@ public class UserRestController{
 		catch(Exception e){
 			return false;
 		}
-		// return "POST method is called. Username is <b>" + user.getUserName() + "</b>. Password is <b>" + user.getUserPassword()+"</b>";
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers", consumes = "application/x-www-form-urlencoded")
+	public Boolean createUsersEncoded(UserRequestModel user){
+
+		try{
+			UserResponseModel returnValue = new UserResponseModel();
+
+			UserDto userDto = new UserDto();
+			BeanUtils.copyProperties(user, userDto);
+
+			UserDto createdUser = userService.createUser(userDto);
+			BeanUtils.copyProperties(createdUser, returnValue);
+
+			return true;
+		}
+		catch(Exception e){
+			return false;
+		}
+
 	}	
+		// return "POST method is called. Username is <b>" + user.getUserName() + "</b>. Password is <b>" + user.getUserPassword()+"</b>";
+	
 }
