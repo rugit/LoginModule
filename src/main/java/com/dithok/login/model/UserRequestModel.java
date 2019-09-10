@@ -1,5 +1,7 @@
 package com.dithok.login.model;
 
+import java.util.Date;
+
 public class UserRequestModel{
 
    	private String userName;
@@ -7,7 +9,7 @@ public class UserRequestModel{
 	private String userMobileNumber;
 	private String userEmailId;
 	private String userGender;
-	private String userDOB; //yyyy-mm-dd
+	private Date userDOB; //yyyy-mm-dd
 
 	public UserRequestModel(){
 
@@ -19,7 +21,7 @@ public class UserRequestModel{
 				String userMobileNumber,
 				String userEmailId,
 				String userGender,
-				String userDOB)
+				Date userDOB)
 	{
 
 		this.userName = userName;
@@ -96,13 +98,13 @@ public class UserRequestModel{
 
 
 	//DOB setter & Getter Methods
-	public String getUserDOB(){
+	public Date getUserDOB(){
 		
 		return userDOB;
 	}
 
 
-	public void setUserDOB(String userDOB){
+	public void setUserDOB(Date userDOB){
 		
 		this.userDOB = userDOB;
 	}

@@ -3,7 +3,7 @@ package com.dithok.login.service.impl;
 import com.dithok.login.entity.UserEntity;
 import com.dithok.login.dto.UserDto;
 import com.dithok.login.service.UserService;
-import com.dithok.login.UserRepository;
+import com.dithok.login.repository.UserRepository;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.BeanUtils;

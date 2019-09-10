@@ -1,4 +1,4 @@
-package com.dithok.login;
+package com.dithok.login.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
