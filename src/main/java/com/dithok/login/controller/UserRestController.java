@@ -16,18 +16,44 @@ public class UserRestController{
 	UserService userService;
 
 	//POST route
-	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers")
-	public UserResponseModel createUsers(@RequestBody UserRequestModel user){
+	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers", consumes = "application/json")
+	public Boolean createUsers(@RequestBody UserRequestModel user){
 
-		UserResponseModel returnValue = new UserResponseModel();
+		try{
+			UserResponseModel returnValue = new UserResponseModel();
 
-		UserDto userDto = new UserDto();
-		BeanUtils.copyProperties(user, userDto);
+			UserDto userDto = new UserDto();
+			BeanUtils.copyProperties(user, userDto);
 
-		UserDto createdUser = userService.createUser(userDto);
-		BeanUtils.copyProperties(createdUser, returnValue);
+			UserDto createdUser = userService.createUser(userDto);
+			BeanUtils.copyProperties(createdUser, returnValue);
 
-		return returnValue;
-		// return "POST method is called. Username is <b>" + user.getUserName() + "</b>. Password is <b>" + user.getUserPassword()+"</b>";
+			return true;
+		}
+		catch(Exception e){
+			return false;
+		}
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = "/api/restaddusers", consumes = "application/x-www-form-urlencoded")
+	public Boolean createUsersEncoded(UserRequestModel user){
+
+		try{
+			UserResponseModel returnValue = new UserResponseModel();
+
+			UserDto userDto = new UserDto();
+			BeanUtils.copyProperties(user, userDto);
+
+			UserDto createdUser = userService.createUser(userDto);
+			BeanUtils.copyProperties(createdUser, returnValue);
+
+			return true;
+		}
+		catch(Exception e){
+			return false;
+		}
+
 	}	
+		// return "POST method is called. Username is <b>" + user.getUserName() + "</b>. Password is <b>" + user.getUserPassword()+"</b>";
+	
 }
