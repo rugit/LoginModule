@@ -22,10 +22,10 @@ public class UserEntity implements Serializable{
 	@Column(nullable = false, length=50)
    	private String userName;
 	
-	@Column(nullable = false, length=10)
+	@Column(nullable = false, length=10, unique=true)
 	private String userMobileNumber;
 
-	@Column(nullable = false, length=120)
+	@Column(nullable = false, length=120, unique=true)
 	private String userEmailId;
 
 	@Column(nullable = false)

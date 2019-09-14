@@ -10,7 +10,7 @@ public class UserResponseModel{
 	private String userMobileNumber;
 	private String userEmailId;
 	private String userGender;
-	private Date userDOB; //yyyy-mm-dd
+	private String userDOB; //yyyy-mm-dd
 
 	//User Id Setter & Getter Methods
 	public String getUserId()
@@ -92,13 +92,13 @@ public class UserResponseModel{
 
 
 	//DOB setter & Getter Methods
-	public Date getUserDOB(){
+	public String getUserDOB(){
 		
 		return userDOB;
 	}
 
 
-	public void setUserDOB(Date userDOB){
+	public void setUserDOB(String userDOB){
 		
 		this.userDOB = userDOB;
 	}

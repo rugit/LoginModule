@@ -9,7 +9,7 @@ public class UserRequestModel{
 	private String userMobileNumber;
 	private String userEmailId;
 	private String userGender;
-	private Date userDOB; //yyyy-mm-dd
+	private String userDOB; //yyyy-mm-dd
 
 	public UserRequestModel(){
 
@@ -21,7 +21,7 @@ public class UserRequestModel{
 				String userMobileNumber,
 				String userEmailId,
 				String userGender,
-				Date userDOB)
+				String userDOB)
 	{
 
 		this.userName = userName;
@@ -98,13 +98,13 @@ public class UserRequestModel{
 
 
 	//DOB setter & Getter Methods
-	public Date getUserDOB(){
+	public String getUserDOB(){
 		
 		return userDOB;
 	}
 
 
-	public void setUserDOB(Date userDOB){
+	public void setUserDOB(String userDOB){
 		
 		this.userDOB = userDOB;
 	}
