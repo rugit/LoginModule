@@ -7,5 +7,5 @@ import com.dithok.login.entity.UserEntity;
 
 @Repository
 public interface UserRepository extends CrudRepository<UserEntity, Long>{
-	// UserEntity findUserByEmail(String email);
+	UserEntity findUserByuserEmailId(String userEmailId);
 }
